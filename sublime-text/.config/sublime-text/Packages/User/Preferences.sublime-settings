@@ -1,0 +1,12 @@
+{
+	"ignored_packages": [],
+	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"theme": "Adaptive.sublime-theme",
+	"font_face": "JetBrains Mono",
+	"font_size": 14,
+	"tab_size": 2,
+
+	"vintage_start_in_command_mode": true,
+	"vintage_ctrl_keys": true,
+	"vintage_use_clipboard": true,
+}
