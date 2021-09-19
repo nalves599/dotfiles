@@ -1,8 +1,8 @@
 {
 	"ignored_packages": [],
-	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"color_scheme": "Packages/Nord/Nord.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
-	"font_face": "JetBrains Mono",
+	"font_face": "FiraCode",
 	"font_size": 14,
 	"tab_size": 2,
 
