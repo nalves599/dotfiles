@@ -1,0 +1,18 @@
+Config { font           = "xft:Fira Code:bold:size=8:antialias=true:hinting=true"
+       , additionalFonts = ["xft:Nerd Font:size=8:antialias=true"]
+       , bgColor        = "#282c34" 
+       , fgColor        = "#ff6c6b"
+       , position       = TopSize L 100 24
+       , hideOnStart    = False
+       , persistent     = True
+       , commands       = [   -- Ram used number and percent
+                              Run Memory ["-t", " mem: <used>M (<usedratio>%)"] 21 
+                              -- Time and Date
+                            , Run Date " %b %d %Y - (%H:%M:%S) " "date" 10
+                            , Run UnsafeStdinReader
+                          ]
+       , sepChar        = "%"
+       , alignSep       = "}{"
+       , template       = "%UnsafeStdinReader% }{ <box type=Bottom width=2 mb=2 color=#ff6c6b><fc=#ff6c6b><action=`alacritty -e htop`>%memory%</action></fc></box>  <box type=Bottom width=2 mb=2 color=#46d9ff><fc=#46d9ff>%date%</fc></box>"
+}
+
