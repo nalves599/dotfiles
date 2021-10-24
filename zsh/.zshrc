@@ -1,14 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-ZSH_TMUX_AUTOSTART=true # Autostart tmux with zsh
+ZSH_TMUX_AUTOSTART=false # Autostart tmux with zsh
 ZSH_TMUX_AUTOCONNECT=FALSE # Create new session
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+DEFAULT_USER="nalves599"
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git yarn docker docker-compose tmux)
@@ -53,3 +54,4 @@ else
   export EDITOR='nvim'
 fi
 
+source /usr/share/nvm/init-nvm.sh

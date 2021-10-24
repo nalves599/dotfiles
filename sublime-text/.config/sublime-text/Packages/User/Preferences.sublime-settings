@@ -1,9 +1,9 @@
 {
 	"ignored_packages": [],
-	"color_scheme": "Packages/Nord/Nord.sublime-color-scheme",
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium).sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 	"font_face": "FiraCode",
-	"font_size": 14,
+	"font_size": 11,
 	"tab_size": 2,
 
 	"vintage_start_in_command_mode": true,
