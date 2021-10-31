@@ -1,8 +1,8 @@
 {
 	"ignored_packages": [],
-	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium).sublime-color-scheme",
+	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
-	"font_face": "FiraCode",
+	"font_face": "JetBrains Mono",
 	"font_size": 11,
 	"tab_size": 2,
 

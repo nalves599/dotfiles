@@ -1,2 +1,4 @@
+!sublime-text/.config/sublime-text/Packages/User/Preferences.sublime-settings
+sublime-text/.config/sublime-text/*
 xmonad/.xmonad/*
 !xmonad/.xmonad/xmonad.hs

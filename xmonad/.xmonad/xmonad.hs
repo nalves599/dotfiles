@@ -105,8 +105,8 @@ myStartupHook = do
     spawnOnce "picom &"
     spawnOnce "nitrogen --restore &"
     spawnOnce "redshift &"
-    spawnOnce "xset r rate 200 50 &"
     spawnOnce "dunst &"
+    spawnOnce "xset r rate 200 50 &"
     setWMName "LG3D"
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -192,10 +192,6 @@ tabs     = renamed [Replace "tabs"]
            -- I cannot add spacing to this layout because it will
            -- add spacing between window and tabs which looks bad.
            $ tabbed shrinkText myTabTheme
-tallAccordion  = renamed [Replace "tallAccordion"]
-           $ Accordion
-wideAccordion  = renamed [Replace "wideAccordion"]
-           $ Mirror Accordion
 
 -- setting colors for tabs layout and tabs sublayout.
 myTabTheme = def { fontName            = myFont
@@ -229,8 +225,6 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| spirals
                                  ||| threeCol
                                  ||| threeRow
-                                 ||| tallAccordion
-                                 ||| wideAccordion
 
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
 myWorkspaces = [" dev ", " www ", " sys ", " mus ", " vid ", " vbox ", " doc ", " gfx ", " chat "]
