@@ -8,6 +8,6 @@ alias vim="nvim"
 alias xopen="xdg-open"
 
 # RNL
-alias rnl="cd $HOME/Develop/RNL"
-alias rnl-up="wg-quick up $HOME/.vpn/RNL.conf"
-alias rnl-down="wg-quick down $HOME/.vpn/RNL.conf"
+alias rnl="cd $HOME/Documents/RNL"
+alias rnl-up="wg-quick up $HOME/Documents/RNL/.vpn/RNL.conf"
+alias rnl-down="wg-quick down $HOME/Documents/RNL/.vpn/RNL.conf"

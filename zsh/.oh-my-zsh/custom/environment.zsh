@@ -9,8 +9,7 @@ export TERMINAL="alacritty"
 export EDITOR="nvim"
 export BROWSER="firefox"
 
-# User program settings
-export JAVA_HOME="/use/lib/jvm/java-11-jdk"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 
-
-
+# RNL env variable
+export RNLADMIN="nuno.alves"
