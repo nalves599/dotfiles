@@ -1,0 +1,32 @@
+##
+# User configuration
+##
+user:
+	name: nalves599
+	group: users
+	shell: /bin/zsh
+
+##
+# Bootloader configuration
+##
+bootloader: grub
+
+##
+# Base packages
+##
+base_packages:
+	- base-devel
+	- zsh
+	- htop
+	- openssh
+	- git
+	- tmux
+	- curl
+	- wget
+	- zip
+	- unzip
+	- tar
+	- rsync
+	- nmap
+	- ntfs-3g
+	- cronie

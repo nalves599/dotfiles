@@ -1,0 +1,29 @@
+---
+
+- name: Pacman mirrorlist setup
+  copy:
+    src: mirrorlist
+    dest: /etc/pacman.d/
+
+- name: Pacman config setup
+  copy:
+    src: pacman.conf
+    dest: /etc/
+
+- name: Perform full system upgrade
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
+
+- name: Install base packages
+  pacman:
+    name: "{{ base_packages }}"
+    state: present
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2

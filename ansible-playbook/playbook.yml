@@ -1,0 +1,9 @@
+---
+
+- name: Install Arch Linux environment
+  hosts: hosts
+  connection: local
+  become: True
+
+  roles:
+    - { role: base, tags: ['base'] }
