@@ -104,6 +104,9 @@ myStartupHook :: X ()
 myStartupHook = do
     spawnOnce "picom &"
     spawnOnce "nitrogen --restore &"
+    spawnOnce "redshift &"
+    spawnOnce "xset r rate 200 50 &"
+    spawnOnce "dunst &"
     setWMName "LG3D"
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -265,34 +268,35 @@ myKeys :: [(String, X ())]
 myKeys =
         [ ("M-C-r", spawn "xmonad --recompile")         -- Recompiles xmonad
         , ("M-S-r", spawn "xmonad --restart")           -- Restarts xmonad
-	, ("M1-<Space>", spawn myRofiCalc)		-- Spawn RofiCalc
-	, ("M-s", spawn myRofi)				-- Spawn Rofi
-	, ("M-<Return>", spawn myTerminal)		-- Spawn Terminal
-	-- Actions
-	, ("M-c", kill1) -- Kill the currently focused client
-	-- Layout
+        , ("M1-<Space>", spawn myRofiCalc)		-- Spawn RofiCalc
+        , ("M-p", spawn myRofi)				-- Spawn Rofi
+        , ("M-<Return>", spawn myTerminal)		-- Spawn Terminal
+        -- Actions
+        , ("M-c", kill1) -- Kill the currently focused client
+        , ("M-S-l", spawn "slock") -- Lock screen
+        -- Layout
         , ("M-<Tab>", sendMessage NextLayout)           -- Switch to next layout
-	, ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
-	, ("M-f", sendMessage (T.Toggle "floats")) -- Toggles my 'floats' layout
+        , ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
+        , ("M-f", sendMessage (T.Toggle "floats")) -- Toggles my 'floats' layout
         , ("M-t", withFocused $ windows . W.sink)  -- Push floating window back to tile
         , ("M-S-t", sinkAll)                       -- Push ALL floating windows to tile
-	-- Gaps
-	, ("C-M1-j", decWindowSpacing 4)         -- Decrease window spacing
+        -- Gaps
+        , ("C-M1-j", decWindowSpacing 4)         -- Decrease window spacing
         , ("C-M1-k", incWindowSpacing 4)         -- Increase window spacing
         , ("C-M1-h", decScreenSpacing 4)         -- Decrease screen spacing
         , ("C-M1-l", incScreenSpacing 4)         -- Increase screen spacing
-	-- Windows navigation
-	, ("M-m", windows W.focusMaster)  -- Move focus to the master window
+        -- Windows navigation
+        , ("M-m", windows W.focusMaster)  -- Move focus to the master window
         , ("M-j", windows W.focusDown)    -- Move focus to the next window
         , ("M-k", windows W.focusUp)      -- Move focus to the prev window
-	-- Volume and brightness
-	, ("<XF86AudioPlay>", spawn "mocp --play")
-	, ("<XF86AudioPrev>", spawn "mocp --previous")
-        , ("<XF86AudioNext>", spawn "mocp --next")
-        , ("<XF86AudioMute>", spawn "amixer set Master toggle")
-	, ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
-        , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
-	, ("<Print>", spawn "flameshot")
+        -- Volume and brightness
+        , ("<XF86AudioPlay>", spawn "playerctl play-pause")
+        , ("<XF86AudioPrev>", spawn "playerctl previous")
+        , ("<XF86AudioNext>", spawn "playerctl next")
+        , ("<XF86AudioMute>", spawn "pamixer -t")
+        , ("<XF86AudioLowerVolume>", spawn "pamixer -d 2")
+        , ("<XF86AudioRaiseVolume>", spawn "pamixer -i 2")
+        , ("<Print>", spawn "flameshot gui")
         ]
 
 main :: IO ()
