@@ -35,6 +35,6 @@ Config { font = "xft:JetBrains Mono:weight=bold:size=8:antialias=true:hinting=tr
   ]
   , sepChar        = "%"
   , alignSep       = "}{"
-  , template = "%UnsafeStdinReader% }{ <fc=#bf616a><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#d08770><action=`alacritty -e htop`>%memory%</action></fc>    <fc=#a3be8c><action=`pamixer -t`>%volumeicon% %volume%</action> | %battery% | %kbd%</fc>   <fc=#b48ead> <action=`alacritty -e htop`>%date%</action></fc>"
+  , template = "%UnsafeStdinReader% }{ <fc=#bf616a><action=`alacritty -e htop -s PERCENT_CPU`>%cpu%</action></fc>    <fc=#d08770><action=`alacritty -e htop -s PERCENT_MEM`>%memory%</action></fc>    <fc=#a3be8c><action=`pamixer -t`>%volumeicon% %volume%</action> | %battery% | %kbd%</fc>   <fc=#b48ead> <action=`xdg-open https://calendar.google.com/`>%date%</action></fc>"
 }
 

@@ -106,7 +106,7 @@ myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "redshift &"
     spawnOnce "dunst &"
-    spawnOnce "xset r rate 200 50 &"
+    spawnOnce "xset r rate 200 50"
     setWMName "LG3D"
 
 myColorizer :: Window -> Bool -> X (String, String)
