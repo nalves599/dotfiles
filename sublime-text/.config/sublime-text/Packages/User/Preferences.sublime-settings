@@ -1,5 +1,6 @@
 {
-	"ignored_packages": [],
+	"ignored_packages": [
+	],
 	"color_scheme": "gruvbox (Dark) (Medium).sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 	"font_face": "JetBrains Mono",

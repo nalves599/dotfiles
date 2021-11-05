@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/autoload/plug')
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdtree'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'scrooloose/nerdcommenter'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
