@@ -218,10 +218,10 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) myDefaultLayout
              where
                myDefaultLayout =     withBorder myBorderWidth tall
-                                 ||| magnify
                                  ||| noBorders monocle
                                  ||| floats
                                  ||| noBorders tabs
+                                 ||| magnify
                                  ||| grid
                                  ||| spirals
                                  ||| threeCol
@@ -291,6 +291,8 @@ myKeys =
         , ("<XF86AudioMute>", spawn "pamixer -t")
         , ("<XF86AudioLowerVolume>", spawn "pamixer -d 2")
         , ("<XF86AudioRaiseVolume>", spawn "pamixer -i 2")
+        , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 5")
+        , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 5")
         , ("<Print>", spawn "flameshot gui")
         ]
 
