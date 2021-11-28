@@ -9,5 +9,7 @@ alias xopen="xdg-open"
 
 # RNL
 alias rnl="cd $HOME/Documents/RNL"
-alias rnl-up="wg-quick up $HOME/Documents/RNL/.vpn/RNL.conf"
-alias rnl-down="wg-quick down $HOME/Documents/RNL/.vpn/RNL.conf"
+alias rnl-up="wg-quick up $HOME/.vpn/RNL.conf"
+alias rnl-down="wg-quick down $HOME/.vpn/RNL.conf"
+# IB
+alias ib="cd $HOME/Documents/InspiredBlue"

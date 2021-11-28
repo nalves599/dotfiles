@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-ZSH_TMUX_AUTOSTART=true # Autostart tmux with zsh
+ZSH_TMUX_AUTOSTART=false # Autostart tmux with zsh
 ZSH_TMUX_AUTOCONNECT=FALSE # Create new session
 
 # Path to your oh-my-zsh installation.
