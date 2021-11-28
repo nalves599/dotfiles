@@ -83,7 +83,7 @@ myEditor = "subl "  -- Sets sublime as editor
 -- myEditor = myTerminal ++ " -e nvim "    -- Sets neovim as editor
 
 myRofi :: String
-myRofi = "rofi -modi window,drun,ssh -theme gruvbox -icon-theme \"Papirus\" -show-icons -show drun"
+myRofi = "rofi -modi window,drun,ssh -icon-theme \"Papirus\" -show-icons -show drun"
 
 myRofiCalc :: String
 myRofiCalc = "rofi -modi calc -show calc"
