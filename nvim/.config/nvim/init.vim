@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plug')
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
   Plug 'airblade/vim-gitgutter'
+  Plug 'neovim/nvim-lspconfig'
 
   " Themes
   Plug 'mhinz/vim-startify'
@@ -61,6 +62,10 @@ require('telescope').setup{
     file_ignore_patterns = { "node_modules", "%.class" }
   }
 }
+EOF
+
+lua << EOF
+require'lspconfig'.tsserver.setup{}
 EOF
 
 fun! Trimwhitespace()
