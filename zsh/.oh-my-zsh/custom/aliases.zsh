@@ -13,3 +13,7 @@ alias rnl-up="wg-quick up $HOME/.vpn/RNL.conf"
 alias rnl-down="wg-quick down $HOME/.vpn/RNL.conf"
 # IB
 alias ib="cd $HOME/Documents/InspiredBlue"
+# STT
+alias stt="cd $HOME/Documents/STT"
+alias stt-up="wg-quick up $HOME/.vpn/STT.conf"
+alias stt-down="wg-quick down $HOME/.vpn/STT.conf"
