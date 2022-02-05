@@ -1,4 +1,5 @@
-nnoremap <C-p> <cmd>Telescope find_files<cr>
-nnoremap ff <cmd>Telescope git_files<cr>
-nnoremap fg <cmd>Telescope live_grep<cr>
-nnoremap fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>ff <cmd>Telescope git_files<cr>
+nnoremap <leader>fF <cmd>Telescope find_files hidden=true<cr>
+nnoremap <leader>fG <cmd>Telescope live_grep<cr>
+nnoremap <leader>fr <cmd>Telescope oldfiles<cr>

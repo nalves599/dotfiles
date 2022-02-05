@@ -37,7 +37,9 @@ call plug#begin('~/.config/nvim/autoload/plug')
 
   " Telescope
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+  " Orgmode
+  Plug 'nvim-orgmode/orgmode'
 
   " Misc plugins
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
