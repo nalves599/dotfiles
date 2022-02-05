@@ -86,6 +86,11 @@ vnoremap J :m '>+1<CR>gv=gv
 nnoremap Y yg$
 nnoremap J mzJ`z
 inoremap <C-c> <esc>
+nmap <leader>wv <C-w>v
+nmap <leader>wl <C-w>l
+nmap <leader>wh <C-w>h
+nmap <leader>wk <C-w>k
+nmap <leader>wj <C-w>j
 
 fun! EmptyRegisters()
     let regs=split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-"', '\zs')
