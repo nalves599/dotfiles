@@ -16,7 +16,22 @@ call plug#begin('~/.config/nvim/autoload/plug')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/nvim-cmp'
+
+  " Misc plugins
+  Plug 'scrooloose/nerdtree'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'sbdchd/neoformat'
+  Plug 'nvim-lualine/lualine.nvim'
+  Plug 'glepnir/dashboard-nvim'
+
+  " Themes
+  "Plug 'gruvbox-community/gruvbox'
+  "Plug 'Mofiqul/dracula.nvim'
+  Plug 'NTBBloodbath/doom-one.nvim'
 
   " Snippets
   Plug 'L3MON4D3/LuaSnip'
@@ -37,23 +52,13 @@ call plug#begin('~/.config/nvim/autoload/plug')
 
   " Telescope
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-  " Orgmode
-  Plug 'nvim-orgmode/orgmode'
-
-  " Misc plugins
-  Plug 'jeffkreeftmeijer/vim-numbertoggle'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'scrooloose/nerdtree'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'sbdchd/neoformat'
-
-  " Themes
-  Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 " Load my plugins configs
 lua require('my-plugins-config')
+lua require('doom-one').setup({ transparent_background = true })
 
 set nocompatible                " disable compatibility to old-time vi
 set showmatch                   " show matching
@@ -66,6 +71,7 @@ set nowrap                      " no wrap line
 set incsearch                   " incremental search
 set tabstop=2                   " number of columns occupied by a tab
 set softtabstop=2               " see multiple spaces as tabstops so <BS> does the right thing
+set colorcolumn=80              " add 80 columns line
 set expandtab                   " converts tabs to white space
 set shiftwidth=2                " width for autoindents
 set autoindent                  " indent a new line the same amount as the line just typed
@@ -109,5 +115,5 @@ augroup END
 
 " Colorscheme
 set termguicolors
-colorscheme gruvbox
+colorscheme doom-one
 highlight Normal guibg=none
