@@ -216,4 +216,4 @@ schemes:
       white:   '#fdf6e3' # base3
 
 
-colors: *DoomOne
+colors: *GruvboxDark

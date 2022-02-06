@@ -1,6 +1,7 @@
 require('telescope').setup({
   defaults = {
     prompt_prefix = '> ',
+    color_devicons = true,
 
     file_sorter = require("telescope.sorters").get_fzy_sorter,
 

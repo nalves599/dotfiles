@@ -22,16 +22,16 @@ call plug#begin('~/.config/nvim/autoload/plug')
   " Misc plugins
   Plug 'scrooloose/nerdtree'
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
-  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdcommenter'
   Plug 'sbdchd/neoformat'
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'glepnir/dashboard-nvim'
+  "Plug 'glepnir/dashboard-nvim'
 
   " Themes
-  "Plug 'gruvbox-community/gruvbox'
+  Plug 'gruvbox-community/gruvbox'
   "Plug 'Mofiqul/dracula.nvim'
-  Plug 'NTBBloodbath/doom-one.nvim'
+  "Plug 'NTBBloodbath/doom-one.nvim'
 
   " Snippets
   Plug 'L3MON4D3/LuaSnip'
@@ -58,7 +58,7 @@ call plug#end()
 
 " Load my plugins configs
 lua require('my-plugins-config')
-lua require('doom-one').setup({ transparent_background = true })
+"lua require('doom-one').setup({ transparent_background = true })
 
 set nocompatible                " disable compatibility to old-time vi
 set showmatch                   " show matching
@@ -115,5 +115,5 @@ augroup END
 
 " Colorscheme
 set termguicolors
-colorscheme doom-one
+colorscheme gruvbox
 highlight Normal guibg=none
