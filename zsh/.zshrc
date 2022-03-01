@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 DEFAULT_USER="nalves599"
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn docker docker-compose tmux)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 

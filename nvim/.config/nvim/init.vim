@@ -20,7 +20,6 @@ call plug#begin('~/.config/nvim/autoload/plug')
   Plug 'hrsh7th/nvim-cmp'
 
   " Misc plugins
-  Plug 'scrooloose/nerdtree'
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdcommenter'
@@ -46,6 +45,9 @@ call plug#begin('~/.config/nvim/autoload/plug')
   Plug 'nvim-lua/popup.nvim'
   Plug 'theprimeagen/harpoon'
 
+  " Git worktree
+  Plug 'theprimeagen/git-worktree.nvim'
+
   " Fugitive Vim - git
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/gv.vim'
@@ -59,6 +61,8 @@ call plug#end()
 " Load my plugins configs
 lua require('my-plugins-config')
 "lua require('doom-one').setup({ transparent_background = true })
+
+let g:neoformat_try_node_exe = 1
 
 set nocompatible                " disable compatibility to old-time vi
 set showmatch                   " show matching
@@ -109,7 +113,7 @@ endfun
 
 augroup Default
   autocmd!
-  autocmd BufWritePre ts,cpp,c,h Neoformat
+  autocmd BufWritePre *.ts Neoformat
   autocmd BufWritePre * %s/\s\+$//e
 augroup END
 

@@ -1,6 +1,6 @@
 Config { font = "xft:JetBrains Mono:weight=bold:size=8:antialias=true:hinting=true"
-        , additionalFonts = [ "xft:Font Awesome 5 Free Solid:pixelsize=12"
-                            , "xft:Font Awesome 5 Brands:pixelsize=12"
+        , additionalFonts = [ "xft:Font Awesome 6 Free Solid:pixelsize=12"
+                            , "xft:Font Awesome 6 Brands:pixelsize=12"
 			                      ]
 	, bgColor	= "#2e3440"
 	, fgColor	= "#d8dee9"
@@ -11,14 +11,18 @@ Config { font = "xft:JetBrains Mono:weight=bold:size=8:antialias=true:hinting=tr
 	, commands      = [
 		-- Keyboard language
 		Run Kbd [ ("pt", "<fn=1>\xf11c</fn> PT"), ("us", "<fn=1>\xf11c</fn> US") ]
+
 		-- Cpu usage in percent
 		, Run Cpu ["-t", "<fn=1>\xf108</fn>  cpu: (<total>%)","-H","50","--high","red"] 20
+
     -- Volume
     , Run Com "echo" ["<fn=1>\xf028</fn>"] "volumeicon" 3600
     , Run Com "pamixer" ["--get-volume-human"] "volume"  10
     -- , Run Com ".config/xmobar/sb-volume.sh" [] "volume" 10
-		-- Ram used number and percent
+
+		-- Ram used memory, number and percent
 		, Run Memory ["-t", "<fn=1>\xf233</fn>  mem: <used>M (<usedratio>%)"] 20
+
 		, Run Battery [ "--template" , "<acstatus>"
 			, "--" -- battery specific options
       -- discharging status
@@ -28,13 +32,15 @@ Config { font = "xft:JetBrains Mono:weight=bold:size=8:antialias=true:hinting=tr
       -- charged status
       , "-i"	, "<fn=1>\xf1e6</fn> 100%"
 		] 50
+
 		-- Time and date
 		, Run Date "<fn=1>\xf017</fn>  %b %d %Y - (%H:%M:%S) " "date" 1
+
 		-- Print Workspace
     , Run UnsafeStdinReader
   ]
   , sepChar        = "%"
   , alignSep       = "}{"
-  , template = "%UnsafeStdinReader% }{ <fc=#bf616a><action=`alacritty -e htop -s PERCENT_CPU`>%cpu%</action></fc>    <fc=#d08770><action=`alacritty -e htop -s PERCENT_MEM`>%memory%</action></fc>    <fc=#a3be8c><action=`pamixer -t`>%volumeicon% %volume%</action> | %battery% | %kbd%</fc>   <fc=#b48ead> <action=`xdg-open https://calendar.google.com/`>%date%</action></fc>"
+  , template = "%UnsafeStdinReader% }{  <fc=#bf616a><action=`alacritty -e htop -s PERCENT_CPU`>%cpu%</action></fc>    <fc=#d08770><action=`alacritty -e htop -s PERCENT_MEM`>%memory%</action></fc>    <fc=#a3be8c><action=`pamixer -t`>%volumeicon% %volume%</action> | %battery% | %kbd%</fc>   <fc=#b48ead> <action=`xdg-open https://calendar.google.com/`>%date%</action></fc>"
 }
 
