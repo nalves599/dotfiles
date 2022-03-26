@@ -5,7 +5,10 @@
   ui = auto
 
 [init]
-  defaultBranch=main
+  defaultBranch = main
+
+[commit]
+  gpgsign = true
 
 [alias]
   st = status -sb

@@ -4,6 +4,8 @@
 # Add `~/.local/bin` to PATH
 export PATH="${PATH}:$HOME/.local/bin"
 
+export GPG_TTY=$(tty)
+
 # Default programs:
 export TERMINAL="alacritty"
 export EDITOR="nvim"
