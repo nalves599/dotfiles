@@ -108,6 +108,7 @@ myStartupHook = do
     spawnOnce "dunst &"
     spawnOnce "xset r rate 200 50"
     spawnOnce "setxkbmap -layout us,pt -option grp:alt_shift_toggle"
+    spawnOnce "xautolock -time 10 -locker slock"
     setWMName "LG3D"
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -289,6 +290,8 @@ myKeys =
         , ("<XF86AudioPrev>", spawn "playerctl previous")
         , ("<XF86AudioNext>", spawn "playerctl next")
         , ("<XF86AudioMute>", spawn "pamixer -t")
+        , ("M-<XF86AudioMute>", spawn "pamixer --source $(pamixer --list-sources | grep -m1 input | cut -d' ' -f1) -t")
+        , ("<XF86AudioMicMute>", spawn "pamixer --source $(pamixer --list-sources | grep -m1 input | cut -d' ' -f1) -t")
         , ("<XF86AudioLowerVolume>", spawn "pamixer -d 2")
         , ("<XF86AudioRaiseVolume>", spawn "pamixer -i 2")
         , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 5")

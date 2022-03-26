@@ -17,3 +17,7 @@ alias ib="cd $HOME/Documents/InspiredBlue"
 alias stt="cd $HOME/Documents/STT"
 alias stt-up="wg-quick up $HOME/.vpn/STT.conf"
 alias stt-down="wg-quick down $HOME/.vpn/STT.conf"
+
+# Power
+alias sleep="slock systemctl suspend -i"
+alias hibernate="slock systemctl hibernate -i"
